@@ -32,20 +32,20 @@ def bubble_sort(arr: list[int]):
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
 
-# TODO
-def bubble_sort_shapes(shapes):
-    global label
-    n = len(shapes)
-
-    for i in range(n):
-        for j in range(0, n-i-1):
-            if shapes[j].height > shapes[j+1].height:
-                shapes[j], shapes[j+1] = shapes[j+1], shapes[j]
-    new_numbers = list()
-    for shape in shapes:
-        new_numbers.append(shape.height/5)
-    draw_columns(new_numbers)
-
+## TODO
+#def bubble_sort_shapes(shapes):
+#    global label
+#    n = len(shapes)
+#
+#    for i in range(n):
+#        for j in range(0, n-i-1):
+#            if shapes[j].height > shapes[j+1].height:
+#                shapes[j], shapes[j+1] = shapes[j+1], shapes[j]
+#    new_numbers = list()
+#    for shape in shapes:
+#        new_numbers.append(shape.height/5)
+#    draw_columns(new_numbers)
+#
 def generate_numbers(n: int):
     if n < 0:
         sys.exit("Negative number inserted in 'generate_numbers'")
@@ -64,8 +64,8 @@ def on_key_press(symbol, modifiers):
     if symbol == key.UP:
         bubble_sort(numbers)
         draw_columns(numbers)
-    if symbol == key.DOWN:
-        bubble_sort_shapes(shape_list)
+#    if symbol == key.DOWN:
+#        bubble_sort_shapes(shape_list)
 
 
 def main():
